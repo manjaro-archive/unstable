@@ -1,0 +1,18 @@
+name: Build Archive
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-pkg:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: manjaro-archive/build-archives@main
+        with:
+          user-mail: ${{ secrets.manjaro_mail }}
+          manjaro-user: ${{ secrets.manjaro_user }}
+          build-mirror: ${{ secrets.BUILD_MIRROR }}
+          branch: "unstable"
+          gpg-key: ${{ secrets.GPG_KEY }}
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          ssh-key: ${{ secrets.SSH_PACKAGE_CI }}
