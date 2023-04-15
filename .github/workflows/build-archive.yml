@@ -13,6 +13,5 @@ jobs:
           manjaro-user: ${{ secrets.manjaro_user }}
           build-mirror: ${{ secrets.BUILD_MIRROR }}
           branch: "unstable"
-          gpg-key: ${{ secrets.GPG_KEY }}
-          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          ssh-key: ${{ secrets.SSH_PACKAGE_CI }}
+          ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          ssh-key: ${{ secrets.SSH_KEY }}
