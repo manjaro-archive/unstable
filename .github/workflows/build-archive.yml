@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: manjaro-archive/build-archives@main
         with:
-          user-mail: ${{ secrets.manjaro_mail }}
-          manjaro-user: ${{ secrets.manjaro_user }}
+          boxit-passphrase: ${{ secrets.BOXIT_PASSPHRASE }}
+          boxit-user: ${{ secrets.MANJARO_USER }}
           build-mirror: ${{ secrets.BUILD_MIRROR }}
           branch: "unstable"
           ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
