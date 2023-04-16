@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-pkg:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: manjaro-archive/build-archives@main
         with:
