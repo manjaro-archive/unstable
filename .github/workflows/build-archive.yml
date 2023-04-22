@@ -15,3 +15,4 @@ jobs:
           branch: "unstable"
           ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
           ssh-key: ${{ secrets.SSH_KEY }}
+          server-host: ${{ secrets.SERVER_HOST }}
