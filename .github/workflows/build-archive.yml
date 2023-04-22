@@ -18,3 +18,4 @@ jobs:
           server-host: ${{ secrets.SERVER_HOST }}
           remote-hoste: ${{ secrets.REMOTE_HOST }}
           remote-path: ${{ secrets.REMOTE-PATH }}
+          host-user: ${{ secrets.HOST_USER }}
