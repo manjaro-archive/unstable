@@ -6,13 +6,16 @@ on:
 jobs:
   build-pkg:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        BRANCH: [unstable, testing, stable]
     steps:
       - uses: manjaro-archive/build-archives@main
         with:
           boxit-passphrase: ${{ secrets.BOXIT_PASSPHRASE }}
           boxit-user: ${{ secrets.MANJARO_USER }}
           build-mirror: ${{ secrets.BUILD_MIRROR }}
-          branch: "unstable"
+          branch: ${{ matrix.branch }}
           ssh-key: ${{ secrets.SSH_KEY }}
           server-host: ${{ secrets.SERVER_HOST }}
           remote-host: ${{ secrets.REMOTE_HOST }}
