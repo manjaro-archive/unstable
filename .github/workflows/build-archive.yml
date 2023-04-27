@@ -7,6 +7,7 @@ jobs:
   build-pkg:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix:
         BRANCH: [unstable, testing, stable]
     steps:
